@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/50645b7642.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Inkoop</title>
+</head>
+<body>
+    <div class="wrapper">
+    <nav>
+        <div class="menu-icon">
+            <span class="fas fa-bars"></span>
+        </div>
+        <div class="logo">
+            BookPod.
+        </div>
+        <div class="nav-items">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Categories</a></li>
+            <li><a href="#">Podcasts</a></li>
+        </div>
+
+        <div class="search-icon">
+            <span class="fas fa-search"></span>
+        </div>
+        <div class="cancel-icon">
+            <span class="fas fa-times"></span>
+        </div>
+        <form action="#">
+            <button type="submit" class="fas fa-search"></button>
+            <input type="search" class="search-data" placeholder="Search..." required>
+        </form>
+    </nav>
+
+    <main>
+        <div class="content-top">
+            <h1>Home of <span>100,000+</span> <br> books and podcasts </h1>
+            <p>Get latest Books and listen to the <br> latest podcasts all in one place</p>
+            <button>Get Started</button>
+        </div>
+
+        <div class="content-middle">
+
+            <div class="middle-left">
+                <img src="assets/banner.jpg" alt="">
+            </div>
+            
+            <div class="middle-right">
+                <div class="middle-right-card">
+                    <h4>LOREM IPSUM</h5>
+                    <h1>Lorem Ipsum <br> dolor sit amet</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit exercitationem harum omnis error?</p>
+                </div>
+                <div class="middle-right-social">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="content-bottom">
+            <h1>Featured Writers</h1>
+            <div class="writers">
+
+                <div class="single-writer">
+                    <img src="assets/1png.png" alt="">
+                    <p>E R Braithwaite</p>
+                </div>
+
+                <div class="single-writer">
+                    <img src="assets/2.png" alt="">
+                    <p>Andrew Levy</p>
+                </div>
+
+                <div class="single-writer">
+                    <img src="assets/3.png" alt="">
+                    <p>Stephen King</p>
+                </div>
+                <div class="single-writer">
+                    <img src="assets/4.png" alt="">
+                    <p>Jorge Amdao</p>
+                </div>
+                <div class="single-writer">
+                    <img src="assets/5.png" alt="">
+                    <p>Gayle Forman</p>
+                </div>
+
+                <div class="single-writer">
+                    <img src="assets/6.png" alt="">
+                    <p>Shashi Tharoor</p>
+                </div>
+
+                <div class="single-writer">
+                    <img src="assets/7.png" alt="">
+                    <p>J.K. Rowling</p>
+                </div>
+
+                <div class="single-writer">
+                    <img src="assets/8.png" alt="">
+                    <p>John Green</p>
+                </div>
+
+            </div>
+        </div>
+    </main>
+   
+    <script>
+        const menuBtn = document.querySelector(".menu-icon span");
+        const searchBtn = document.querySelector(".search-icon");
+        const cancelBtn = document.querySelector(".cancel-icon");
+        const items = document.querySelector(".nav-items");
+        const form = document.querySelector("form");
+        menuBtn.onclick = () => {
+            items.classList.add("active");
+            menuBtn.classList.add("hide");
+            searchBtn.classList.add("hide");
+            cancelBtn.classList.add("show");
+        }
+        cancelBtn.onclick = () => {
+            items.classList.remove("active");
+            menuBtn.classList.remove("hide");
+            searchBtn.classList.remove("hide");
+            cancelBtn.classList.remove("show");
+            form.classList.remove("active");
+            cancelBtn.style.color = "#ff3d00";
+        }
+        searchBtn.onclick = () => {
+            form.classList.add("active");
+            searchBtn.classList.add("hide");
+            cancelBtn.classList.add("show");
+        }
+    </script>
+    </div>
+</body>
+</html>
